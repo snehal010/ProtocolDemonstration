@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP vs HTTPS Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>🔐 HTTP vs HTTPS Communication Flow</h1>
+
+<!-- INPUT -->
+<div class="box">
+    <input type="text" id="msg" placeholder="Enter message">
+
+    <button class="http" onclick="sendHTTP()">Send via HTTP</button>
+    <button class="https" onclick="sendHTTPS()">Send via HTTPS</button>
+</div>
+
+<!-- NETWORK FLOW -->
+<div class="network">
+
+    <div class="node" id="user">
+        <img src="assets/images/user.svg" class="icon">
+        <p>USER</p>
+    </div>
+
+    <div class="arrow">➡️</div>
+
+    <div class="node" id="browser">
+        <img src="assets/images/browser.svg" class="icon">
+        <p>BROWSER</p>
+    </div>
+
+    <div class="arrow">➡️</div>
+
+    <div class="node" id="server">
+        <img src="assets/images/server.svg" class="icon">
+        <p>SERVER</p>
+    </div>
+
+</div>
+
+<!-- LOCK ICON -->
+<div style="margin-top: 10px;">
+    <img src="assets/images/lock.svg" id="lockIcon" class="lockIcon">
+</div>
+
+<!-- PACKET (NOW CONTAINS TEXT) -->
+<div id="packet" class="packet">
+    <span id="packetText"></span>
+</div>
+
+<!-- OUTPUT -->
+<div class="output">
+    <h2>Output</h2>
+
+    <div id="result">No data sent yet</div>
+    <div id="log"></div>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
